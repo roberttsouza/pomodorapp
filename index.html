@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Pomodor App</title>
+</head>
+<body>
+<button type="button" class="burger" onclick="toggleSidebar()">
+  <img class="burger-avatar" src="img/perfil.png" alt="avatar">
+  <span class="burger-icon"></span>
+</button>
+
+<div class="overlay"></div>
+  <aside class="sidebar">
+  <img class="sidebar-avatar" src="img/perfil.png" alt="avatar">
+  <div class="sidebar-username">Roberttsouza</div>
+  <div class="sidebar-role">Frontend Developer</div>
+
+  <nav class="sidebar-menu">
+    <label for="work">
+    <span><i class="ri-book-open-line"></i> Work duration</span>
+    <input type="number" id="work" value="25">
+    </label>
+
+    <label for="break">
+      <span><i class="ri-pause-mini-fill"></i> Short break duration</span>
+      <input type="number" id="break" value="5">
+    </label>
+
+    <label for="rounds">
+      <span><i class="ri-exchange-funds-line"></i> Rounds</span>
+      <input type="number" id="rounds" value="4">
+    </label>
+  </nav>
+
+  <nav class="sidebar-menu bottom">
+    <button type="button">
+      <img src="" />
+      <span>Sign Out</span>
+    </button>
+  </nav>
+
+</aside>
+
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
