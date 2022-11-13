@@ -12,6 +12,10 @@
   <title>Pomodor App</title>
 </head>
 <body>
+  <nav class="nav-menu">
+    <img src="img/logo.png" alt="logo">
+  </nav>
+  
 <button type="button" class="burger" onclick="toggleSidebar()">
   <img class="burger-avatar" src="img/perfil.png" alt="avatar">
   <span class="burger-icon"></span>
@@ -49,6 +53,29 @@
 
 </aside>
 
+
+<main>
+  <section class="section-watch">
+    <div class="containet">
+      <div class="content">
+
+        <div class="box-watch">
+          <div class="watch">25:00</div>
+          <span class="status">FOCUS</span>
+        </div>
+
+        <button class="reset-btn btn" onclick="reset()"><i class="ri-restart-line"></i></button>
+        <button class="start-btn btn" onclick="start()"><i class="ri-play-fill"></i></button>
+        <button class="next-btn btn" onclick="next()"><i class="ri-skip-forward-fill"></i></button>
+
+        <div class="sessions">
+          <p><span class="now-session">1</span> of <span class="rem-sessions">4</span></p>
+          <p>sessions</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
 
 
