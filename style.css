@@ -220,11 +220,14 @@ body.open .sidebar {
 }
 
 /*SECTION WATCH TIME*/
-.section-watch > .containet > .content{
+.section-watch{
   position: absolute;
   top: 20%;
   left: 34%;
-  transform: translate(-50% -50%);
+  transform: translate(-50% -50%);  
+  z-index: 0;
+}
+.section-watch > .containet > .content{
   text-align: center;
   z-index: 0;
 }
@@ -259,37 +262,16 @@ button + button{
 
 .start-btn{
   color:rgb(84, 62, 246);
-  border:3px solid   rgb(84, 62, 246);
-}
-
-@media (width < 800px){
-  .section-watch > .containet > .content{
-    left: 14%;
-  }
-  .box-watch{
-    padding: 50px 15px;
-  }
-  .box-watch .watch{
-    font-size: 70px;
-  }
+  border:5px solid   rgb(84, 62, 246);
+  font-size: 34px;
 }
 
 @media (width < 600px){
-  .section-watch > .containet > .content{
-    left: 14%;
-  }
-  .box-watch{
-    padding: 50px 15px;
-  }
-  .box-watch .watch{
-    font-size: 70px;
-  }
-}
-@media (width < 400px){
-  .section-watch > .containet > .content{
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    transform: translate(-50% -50%);
+  .section-watch{
+    position: relative;
+    margin: 7%;
+    left: auto;
+    top: auto;
+    
   }
 }
