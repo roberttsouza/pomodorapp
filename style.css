@@ -1,9 +1,9 @@
 *{
   box-sizing: border-box;
+  margin: 0;
 }
 
 body{
-  margin: 0;
   background: #fdfcfe;
   font-family: 'Roboto', sans-serif;
   color: #121212;
@@ -51,13 +51,6 @@ body.open .overlay{
   align-items: center;
   gap: 6px;
 }
-
-@media (width >= 500px){
-  .burger{
-    display: none;
-  }
-}
-
 .burger-avatar{
   width: 30px;
   height: 30px;
@@ -104,31 +97,6 @@ body.open .burger-icon{
   transition-duration: 0.6s;
 }
 
-@media(width >= 330px){
-  .sidebar{
-    transition-property: translate;
-  }
-  
-}
-
-@media (width >= 400px) {
-  .sidebar {
-    translate: 100% 0;
-    width: 250px;
-    transition: 0.4s;
-    border-left: 1px solid rgba(255, 255, 255, 0.16);
-  }
-}
-
-@media (width >= 500px) {
-  .sidebar {
-    translate: 0 0;
-
-    opacity: 1;
-    visibility: visible;
-    filter: blur(0);
-  }
-}
 
 body.open .sidebar {
   translate: 0 0;
@@ -150,14 +118,12 @@ body.open .sidebar {
   font-weight: 500;
   color: rgba(0, 0, 0, 1);
 }
-
 .sidebar-role {
   margin: 0 0 20px;
   font-size: 12px;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.6);
 }
-
 .sidebar-menu {
   display: grid;
   width: 100%;
@@ -165,12 +131,6 @@ body.open .sidebar {
   padding-left: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.16);
   
-}
-
-@media (width >= 350px) {
-  .sidebar-menu {
-    padding-left: 0;
-  }
 }
 .sidebar-menu > label{
   margin-top: 20px;
@@ -212,26 +172,26 @@ body.open .sidebar {
   cursor: pointer;
 }
 
-@media (width < 400px){
-  .nav-menu img{
-    width: 150px;
-    padding: 20px;
-  }
-}
+
+
+
 
 /*SECTION WATCH TIME*/
-.section-watch > .containet > .content{
-  position: absolute;
-  top: 20%;
-  left: 34%;
-  transform: translate(-50% -50%);
+.section-watch{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.section-watch  .containet  .content{
   text-align: center;
   z-index: 0;
+  margin-right: 150px;
 }
 .box-watch{
   padding: 80px 35px;
   border: 16px solid rgb(84, 62, 246);
   border-radius: 50%;
+
 }
 .box-watch .watch{
   font-size: 90px;
@@ -241,8 +201,6 @@ body.open .sidebar {
   font-size: 20px;
   color: #7e7e7f;
 }
-
-
 .btn{
   margin-top: 20px;
   font-size: 26px;
@@ -256,50 +214,42 @@ body.open .sidebar {
 button + button{
   margin-left: 20px;
 }
-
 .start-btn{
   color:rgb(84, 62, 246);
   border:3px solid   rgb(84, 62, 246);
 }
 
-@media (width < 800px){
-  .section-watch > .containet > .content{
-    left: 14%;
+@media(width >= 330px){
+  .sidebar{
+    transition-property: transparent;
   }
-  .box-watch{
-    padding: 50px 15px;
+  .sidebar-menu {
+    padding-left: 0;
+  } 
+}
+@media (width >= 500px) {
+  .sidebar {
+    translate: 0 0;
+    opacity: 1;
+    width: 250px;
+    visibility: visible;
+    filter: blur(0);
   }
-  .box-watch .watch{
-    font-size: 70px;
+}
+@media (width >= 500px){
+  .burger{
+    display: none;
   }
 }
 
 @media (width < 600px){
-  .section-watch > .containet > .content{
-    left: 14%;
+  .nav-menu img{
+    width: 150px;
+    padding: 20px;
   }
-  .box-watch{
-    padding: 50px 15px;
+  .section-watch  .containet  .content{
+    margin-top: 50px;
+    margin-right: 0;
   }
-  .box-watch .watch{
-    font-size: 70px;
-  }
-}
-@media (width < 400px){
-  .section-watch > .containet > .content{
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    transform: translate(-50% -50%);
-  }
-  .box-watch{
-    padding: 65px 45px;
-  }
-  .box-watch .watch{
-    font-size: 50px;
-  } 
-  .box-watch .status{
-    font-size: 15px;
-  }
-  
+
 }
