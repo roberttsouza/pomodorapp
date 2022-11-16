@@ -249,7 +249,7 @@ button + button{
     padding: 20px;
   }
   .section-watch{
-    display: flex;
+    position: absolute;
   }
   .section-watch  .containet  .content{
     margin-top: 50px;
