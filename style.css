@@ -248,7 +248,7 @@ button + button{
 }
 
 @media (width < 600px){
-  .sidebar{
+  .overlay{
     height: 100vh;
   }
   .nav-menu img{
