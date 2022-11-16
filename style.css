@@ -253,8 +253,13 @@ button + button{
     padding: 20px;
   }
   .section-watch  .containet{
+    display: grid;
     grid-template-columns: 1fr;
   }
+  .fake{
+    display: none;
+  }
+
   .section-watch  .containet  .content{
     margin-top: 50px;
   }
