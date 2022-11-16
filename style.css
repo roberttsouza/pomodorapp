@@ -183,10 +183,6 @@ body.open .sidebar {
   margin: auto;
   text-align: center;
 }
-.section-watch  .containet{
-  display: grid;
-  grid-template-columns: 1fr 20vh;
-}
 .section-watch  .containet  .content{
   z-index: 0;
   margin-right: 0px;
@@ -252,14 +248,6 @@ button + button{
     width: 150px;
     padding: 20px;
   }
-  .section-watch  .containet{
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .fake{
-    display: none;
-  }
-
   .section-watch  .containet  .content{
     margin-top: 50px;
   }
