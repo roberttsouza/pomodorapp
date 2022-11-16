@@ -256,7 +256,7 @@ button + button{
     grid-template-columns: 1fr;
   }
   .section-watch  .containet  .content{
-    margin-top: 10vh;
+    margin-top: 50px;
   }
   .box-watch{
     padding: 60px 35px;
