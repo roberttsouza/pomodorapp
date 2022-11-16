@@ -241,6 +241,10 @@ button + button{
   .burger{
     display: none;
   }
+  .section-watch  .containet  .content{
+    margin-top: 5vh;
+    margin-right: 150px;
+  }
 }
 
 @media (width < 600px){
@@ -249,7 +253,7 @@ button + button{
     padding: 20px;
   }
   .section-watch  .containet  .content{
-    margin-top: 50px;
+    margin-top: 5vh;
   }
   .box-watch{
     padding: 60px 35px;
