@@ -248,18 +248,17 @@ button + button{
     width: 150px;
     padding: 20px;
   }
-  .section-watch{
-    position: absolute;
-  }
   .section-watch  .containet  .content{
     margin-top: 50px;
-    margin-right: 0;
+    margin-left: 150px;
   }
   .box-watch{
     padding: 60px 35px;
   }
   .box-watch .watch{
     font-size: 60px;
+    display: flex;
+    justify-content: center;
   }
   .btn{
     font-size: 26px;
