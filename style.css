@@ -247,9 +247,19 @@ button + button{
     width: 150px;
     padding: 20px;
   }
+  
   .section-watch  .containet  .content{
     margin-top: 50px;
     margin-right: 0;
   }
-
+  .box-watch{
+    padding: 60px 35px;
+  }
+  .box-watch .watch{
+    font-size: 60px;
+  }
+  .btn{
+    font-size: 26px;
+    padding: 6px 10px;
+  }
 }
