@@ -181,11 +181,11 @@ body.open .sidebar {
   display: flex;
   justify-content: center;
   margin: auto;
+  text-align: center;
 }
 .section-watch  .containet  .content{
-  text-align: center;
   z-index: 0;
-  margin-right: 150px;
+  margin-right: 0px;
 }
 .box-watch{
   padding: 80px 35px;
@@ -250,15 +250,12 @@ button + button{
   }
   .section-watch  .containet  .content{
     margin-top: 50px;
-    margin-left: 150px;
   }
   .box-watch{
     padding: 60px 35px;
   }
   .box-watch .watch{
     font-size: 60px;
-    display: flex;
-    justify-content: center;
   }
   .btn{
     font-size: 26px;
