@@ -219,6 +219,12 @@ button + button{
   color:rgb(84, 62, 246);
   border:3px solid   rgb(84, 62, 246);
 }
+.audio{
+  text-align: center;
+  margin-left: -145px;
+  margin-top: 20px;
+}
+
 
 @media(width >= 330px){
   .sidebar{
@@ -264,5 +270,9 @@ button + button{
   .btn{
     font-size: 26px;
     padding: 6px 10px;
+  }
+  .audio{
+    text-align: center;
+    margin-left: auto;
   }
 }
