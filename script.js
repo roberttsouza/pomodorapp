@@ -4,10 +4,10 @@ let work = document.getElementById("work").value;
 let breakTime = document.getElementById("break").value;
 let rounds = document.getElementById("rounds").value;
 let som = document.querySelector("#som");
-let currentRound = 1;
+let currentRound = document.querySelector(".now-session").textContent;
+
 const sessionNow = document.querySelector(".now-session").textContent;
 const nextSession = document.querySelector(".rem-sessions").textContent;
-
 const regex = /^([0-9]){1,3}$/g;
 
 const foundWork = (work,breakTime,rounds).match(regex);
@@ -19,12 +19,14 @@ if (work && breakTime && rounds == foundWork){
   console.log("Algo deu errodo")
 }
 
-
-
-
 // declarando as var do time
 let time = document.querySelector('#work').value * 60;
 let intervalId;
+
+
+
+
+
 
 //atrubindo uma regra para que se o minuto ou segundo for menor que 10, atribuir um zero na frente para sempre ficar com dois numeros
 function twoDigits(digits){
@@ -44,22 +46,29 @@ start = () =>{
       if (currentRound === rounds) {
         // tudo finalizado, não faz nada
     } else {
+      work = inputWork.value;
+      breakTime = breakInput.value;
         if (currentRound % 2 !== 0) {
             // inicia o tempo de descanso
             time = breakTime * 60;
-            currentRound++;
+            document.querySelector(".status").innerHTML = `<span class="status">BREAK</span>`
         } else {
             // inicia o tempo de trabalho
             time = work * 60;
-            currentRound++;
+            document.querySelector(".status").innerHTML = `<span class="status">FOCUS</span>`
+           
+            
         }
     }
       clearInterval(intervalId);
       som.play()
+      currentRound++ / 2;
+      console.log(currentRound)
+    }else{
     }
-  }, 1000);
+  });
 }
-
+ 
 //se o botão de reset for precionado, ele ira voltar para o valor do input work atual
 reset = () => {
   clearInterval(intervalId)
@@ -76,7 +85,15 @@ inputWork.addEventListener("input", function(){
   min= document.querySelector("#work").value
   sec=0
   document.querySelector('.watch').innerHTML = `${twoDigits(min)}:${twoDigits(sec)}`
+});
+
+//atribuindo uma variavel para o input break
+const breakInput = document.querySelector("#break");
+breakTime = parseInt(breakInput.value);//atribuindo o valor atualizado em tempo real
+breakInput.addEventListener('input', function(){
+  breakTime = parseInt(this.value);//função para identificar que o input break foi alterado
 })
+
 
 
 //função responsável por atualizar o time em segundos e converter para numeros inteiros
