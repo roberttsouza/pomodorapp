@@ -6,8 +6,8 @@ let rounds = document.getElementById("rounds").value;
 let som = document.querySelector("#som");
 let currentRound = document.querySelector(".now-session").textContent;
 
-const sessionNow = document.querySelector(".now-session").textContent;
-const nextSession = document.querySelector(".rem-sessions").textContent;
+const sessionNow = document.querySelector(".now-session");
+const nextSession = document.querySelector(".rem-sessions");
 const regex = /^([0-9]){1,3}$/g;
 
 const foundWork = (work,breakTime,rounds).match(regex);
@@ -42,9 +42,11 @@ start = () =>{
   intervalId = setInterval(() => {
     time--;
     updateTimer();
+
     if (time === 0){
       if (currentRound === rounds) {
         // tudo finalizado, não faz nada
+        
     } else {
       work = inputWork.value;
       breakTime = breakInput.value;
@@ -56,19 +58,17 @@ start = () =>{
             // inicia o tempo de trabalho
             time = work * 60;
             document.querySelector(".status").innerHTML = `<span class="status">FOCUS</span>`
-           
+           sessionNow.innerHTML = `<span class="now-session">${currentRound / 2}</span>`
             
         }
     }
       clearInterval(intervalId);
       som.play()
       currentRound++ / 2;
-      console.log(currentRound)
     }else{
     }
   });
 }
- 
 //se o botão de reset for precionado, ele ira voltar para o valor do input work atual
 reset = () => {
   clearInterval(intervalId)
@@ -76,6 +76,14 @@ reset = () => {
   min= document.querySelector("#work").value
   sec=0
   document.querySelector('.watch').innerHTML = `${twoDigits(min)}:${twoDigits(sec)}`
+  sessionNow.innerHTML = `<span class="now-session">1</span>`
+}
+
+next = () => {
+  min= document.querySelector("#work").value
+  sec=0
+  document.querySelector('.watch').innerHTML = `${twoDigits(min)}:${twoDigits(sec)}`
+  sessionNow.innerHTML = `${currentRound++}`
 }
 
 //atribuindo um evendo para que quando o valor input por alterado, ele muda automaticamente
@@ -94,7 +102,13 @@ breakInput.addEventListener('input', function(){
   breakTime = parseInt(this.value);//função para identificar que o input break foi alterado
 })
 
-
+const roundInput = document.querySelector("#rounds");
+roundCurrent = parseInt(roundInput.value);
+roundInput.addEventListener('input', function(){
+  roundCurrent = parseInt(this.value);
+  secSession = document.querySelector("#rounds").value;
+  nextSession.innerHTML = `${secSession}`;  
+})
 
 //função responsável por atualizar o time em segundos e converter para numeros inteiros
 function updateTimer(){
@@ -104,6 +118,10 @@ function updateTimer(){
 }
 
 
+// function updateCurrentSession(newSession){
+//   currentRound = newSession
+//   console.log('deu certo')
+// 
 
 
 //função para pausar o sem de alarme
