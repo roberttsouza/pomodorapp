@@ -37,12 +37,25 @@ function twoDigits(digits){
     }
   }
 
+  //função para validar os campo de imput obrigando a colocar um valor
+function validateInput(){
+  var x = document.querySelector('#work').value;
+    if(x == ""){
+      min= document.querySelector("#work").value
+      sec=0
+      document.querySelector('.watch').innerHTML = `${twoDigits(min)}:${twoDigits(sec)}`
+      
+
+    return false
+  }
+}
 //Ao precionar o botão de play, o time começa a contar
 start = () =>{
+
   intervalId = setInterval(() => {
     time--;
     updateTimer();
-
+    validateInput();
     if (time === 0){
       if (currentRound === rounds) {
         // tudo finalizado, não faz nada
@@ -65,9 +78,14 @@ start = () =>{
       clearInterval(intervalId);
       som.play()
       currentRound++ / 2;
+      
+      //condição se o valor do session informada no imput for igual ao valor atual ele apresenta uma mensagem
+      if (secSession === sessionNow.textContent) {
+        console.log('hora de dar uma pausa');
+      };
     }else{
     }
-  });
+  }, 1000);
 }
 //se o botão de reset for precionado, ele ira voltar para o valor do input work atual
 reset = () => {
