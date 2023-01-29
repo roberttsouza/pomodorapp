@@ -5,6 +5,7 @@ let breakTime = document.getElementById("break").value;
 let rounds = document.getElementById("rounds").value;
 let som = document.querySelector("#som");
 let currentRound = document.querySelector(".now-session").textContent;
+let clickPlay = false;
 
 const sessionNow = document.querySelector(".now-session");
 const nextSession = document.querySelector(".rem-sessions");
@@ -49,8 +50,13 @@ function validateInput(){
     return false
   }
 }
+
+
 //Ao precionar o botão de play, o time começa a contar
 start = () =>{
+  //condição para pausar se o play for apertado mais de uma vez
+  if(!clickPlay){
+    clickPlay = true;
 
   intervalId = setInterval(() => {
     time--;
@@ -86,7 +92,12 @@ start = () =>{
     }else{
     }
   }, 1000);
-}
+  }else{
+    clearInterval(intervalId)
+    intervalId = null;
+    clickPlay = false;
+  }}
+
 //se o botão de reset for precionado, ele ira voltar para o valor do input work atual
 reset = () => {
   clearInterval(intervalId)
@@ -136,13 +147,8 @@ function updateTimer(){
 }
 
 
-// function updateCurrentSession(newSession){
-//   currentRound = newSession
-//   console.log('deu certo')
-// 
 
-
-//função para pausar o sem de alarme
+//função para pausar o som de alarme
 const pauseSom = document.querySelector("#pause")
 pauseSom.addEventListener('click', function(){
   som.pause();
