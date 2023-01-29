@@ -224,6 +224,14 @@ button + button{
   margin-left: -145px;
   margin-top: 20px;
 }
+#mute{
+  padding: 10px 30px;
+  border-radius: 6px;
+  background-color: #543ef6; 
+  font-size: 14px;
+  color: #f1f1f1;
+}
+
 
 
 @media(width >= 330px){

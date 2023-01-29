@@ -6,7 +6,6 @@ let rounds = document.getElementById("rounds").value;
 let som = document.querySelector("#som");
 let currentRound = document.querySelector(".now-session").textContent;
 let clickPlay = false;
-
 const sessionNow = document.querySelector(".now-session");
 const nextSession = document.querySelector(".rem-sessions");
 const regex = /^([0-9]){1,3}$/g;
@@ -62,6 +61,8 @@ start = () =>{
     time--;
     updateTimer();
     validateInput();
+    let watch = document.querySelector(".watch").textContent
+    document.querySelector(".title").innerHTML = `🕗 ${twoDigits(watch)}`
     if (time === 0){
       if (currentRound === rounds) {
         // tudo finalizado, não faz nada
@@ -149,7 +150,8 @@ function updateTimer(){
 
 
 //função para pausar o som de alarme
-const pauseSom = document.querySelector("#pause")
+const pauseSom = document.querySelector("#mute")
 pauseSom.addEventListener('click', function(){
   som.pause();
 })
+ 
