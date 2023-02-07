@@ -88,11 +88,16 @@ start = () =>{
       
       //condição se o valor do session informada no imput for igual ao valor atual ele apresenta uma mensagem
       if (secSession === sessionNow.textContent) {
+        document.querySelector('.modalDescaso').style.display = "block"
+        closeDomal = () =>{
+          document.querySelector('.modalDescaso').style.display = "none";
+          location.reload()
+        }
         console.log('hora de dar uma pausa');
       };
     }else{
     }
-  }, 1000);
+  });
   }else{
     clearInterval(intervalId)
     intervalId = null;

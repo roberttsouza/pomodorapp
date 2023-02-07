@@ -232,6 +232,48 @@ button + button{
   color: #f1f1f1;
 }
 
+.modalDescaso{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #543ef6;
+  width: 50%;
+  height: 48%;
+  padding: 80px 120px;
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+}
+.modalText{
+  text-align: center;
+  margin-top: 30px;
+}
+.modalDescaso h1{
+  color: #543ef6;
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+.modalDescaso p{
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.modalDescaso span{
+  opacity: 70%;
+  margin-top: 300px;
+}
+.modalDescaso .closeModal{
+  float: right;
+  margin-top: -60px;
+  margin-right: -90px;
+  font-size: 26px;
+}
+.modalDescaso .closeModal i{
+
+  font-size: 26px;
+}
 
 
 @media(width >= 330px){
