@@ -251,6 +251,42 @@ button + button{
   text-align: center;
   margin-top: 30px;
 }
+
+.modalformComplite{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #543ef6;
+  width: 40%;
+  height: 38%;
+  padding: 80px 120px;
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+}
+.modaltextComplite{
+  text-align: center;
+  margin-top: 30px;
+}
+.modaltextComplite h1{
+  color: #543ef6;
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+.modalformComplite .closemodalComplite{
+  float: right;
+  margin-top: -50px;
+  margin-right: -80px;
+  font-size: 26px;
+}
+.modalformComplite .closemodalComplite i{
+  font-size: 26px;
+}
+
+
 .modalDescaso h1{
   color: #543ef6;
   margin-bottom: 20px;
@@ -271,7 +307,6 @@ button + button{
   font-size: 26px;
 }
 .modalDescaso .closeModal i{
-
   font-size: 26px;
 }
 

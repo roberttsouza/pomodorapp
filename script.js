@@ -43,7 +43,12 @@ function validateInput(){
     if(x == ""){
       min= document.querySelector("#work").value
       sec=0
-      document.querySelector('.watch').innerHTML = `${twoDigits(min)}:${twoDigits(sec)}`
+      document.querySelector('.watch').innerHTML = `25:00`;
+      document.querySelector('.modalformComplite').style.display = "block"
+      closemodalComplite = () =>{
+        document.querySelector('.modalformComplite').style.display = "none";
+        location.reload()
+      }
       
 
     return false
@@ -89,7 +94,7 @@ start = () =>{
       //condição se o valor do session informada no imput for igual ao valor atual ele apresenta uma mensagem
       if (secSession === sessionNow.textContent) {
         document.querySelector('.modalDescaso').style.display = "block"
-        closeDomal = () =>{
+        closeModal = () =>{
           document.querySelector('.modalDescaso').style.display = "none";
           location.reload()
         }
@@ -97,7 +102,7 @@ start = () =>{
       };
     }else{
     }
-  });
+  },1000);
   }else{
     clearInterval(intervalId)
     intervalId = null;
